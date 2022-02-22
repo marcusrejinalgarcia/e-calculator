@@ -1,0 +1,77 @@
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;}
+
+.container {
+    background: lightblue;
+    border-radius: 40px;
+
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.input {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "btn-ac btn-del btn-pc btn-div"
+        "num7 num8 num9 btn-mul"
+        "num4 num5 num6 btn-sub"
+        "num1 num2 num3 btn-add"
+        "num0 btn-dec btn-eq btn-eq";
+    grid-gap: 16px;
+}
+
+input {
+    &.display {
+        border: 0;
+        text-align: right;
+        padding: 0 24px;
+        &#display1 {
+            height: 40px;
+            font-size: 20px;
+            padding: 0 40px;
+        }
+        &#display2 {
+            height: 64px;
+            font-size: 32px;
+        }
+    }
+    &.btn {
+        min-width: 80px;
+        height: 80px;
+        border: 0;
+        border-radius: 40px;
+        font-size: 28px;
+        background: white;
+        
+        &:hover {
+            background: lightgray;
+        }
+    }
+}
+
+
+
+$functions: "ac", "ce", "pc", "div", "mul", "add", "sub", "eq", "del", "dec";
+
+@each $func in $functions {
+    #btn-#{$func} {
+        grid-area: btn-#{$func};
+    }
+}
+
+@for $i from 0 through 9 {
+    #digit-#{$i} {
+        grid-area: num#{$i};
+    }
+}

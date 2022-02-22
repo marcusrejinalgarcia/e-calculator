@@ -1,0 +1,133 @@
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  background: lightblue;
+  border-radius: 40px;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.input {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "btn-ac btn-del btn-pc btn-div" "num7 num8 num9 btn-mul" "num4 num5 num6 btn-sub" "num1 num2 num3 btn-add" "num0 btn-dec btn-eq btn-eq";
+  grid-gap: 16px;
+}
+
+input.display {
+  border: 0;
+  text-align: right;
+  padding: 0 24px;
+}
+input.display#display1 {
+  height: 40px;
+  font-size: 20px;
+  padding: 0 40px;
+}
+input.display#display2 {
+  height: 64px;
+  font-size: 32px;
+}
+input.btn {
+  min-width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 40px;
+  font-size: 28px;
+  background: white;
+}
+input.btn:hover {
+  background: lightgray;
+}
+
+#btn-ac {
+  grid-area: btn-ac;
+}
+
+#btn-ce {
+  grid-area: btn-ce;
+}
+
+#btn-pc {
+  grid-area: btn-pc;
+}
+
+#btn-div {
+  grid-area: btn-div;
+}
+
+#btn-mul {
+  grid-area: btn-mul;
+}
+
+#btn-add {
+  grid-area: btn-add;
+}
+
+#btn-sub {
+  grid-area: btn-sub;
+}
+
+#btn-eq {
+  grid-area: btn-eq;
+}
+
+#btn-del {
+  grid-area: btn-del;
+}
+
+#btn-dec {
+  grid-area: btn-dec;
+}
+
+#digit-0 {
+  grid-area: num0;
+}
+
+#digit-1 {
+  grid-area: num1;
+}
+
+#digit-2 {
+  grid-area: num2;
+}
+
+#digit-3 {
+  grid-area: num3;
+}
+
+#digit-4 {
+  grid-area: num4;
+}
+
+#digit-5 {
+  grid-area: num5;
+}
+
+#digit-6 {
+  grid-area: num6;
+}
+
+#digit-7 {
+  grid-area: num7;
+}
+
+#digit-8 {
+  grid-area: num8;
+}
+
+#digit-9 {
+  grid-area: num9;
+}
